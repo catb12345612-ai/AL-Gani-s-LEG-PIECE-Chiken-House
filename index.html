@@ -204,7 +204,7 @@
         <!-- HEADER (FIXED STORE LOGO) -->
         <header class="header-section">
             <div class="logo-wrapper click-sfx">
-                <img src="leg.piece.jpeg" alt="AL Gani's LEG PIECE Logo" class="store-logo-img" onerror="this.src='https://via.placeholder.com/160/0a0404/ffb703?text=AL+GANI'">
+                <img src="leg.piece.png" alt="AL Gani's LEG PIECE Logo" class="store-logo-img" onerror="this.src='https://via.placeholder.com/160/0a0404/ffb703?text=AL+GANI'">
             </div>
             <h1 class="store-name glow-text">AL Gani's<br>LEG PIECE Chicken House</h1>
             
@@ -213,7 +213,7 @@
             </div>
             
             <div class="owners-tag">
-                Proudly Owned By <br> <span>Khaleel Bhai</span> & <span>Yousuf Bhai</span>
+                Proudly Owned By <br> <span>Yousuf Bhai</span> & <span>Khaleel Bhai</span>
             </div>
         </header>
 
@@ -225,9 +225,11 @@
             <div class="action-btn click-sfx" onclick="openModal('wa')">
                 <i class="fa-brands fa-whatsapp"></i><span>WhatsApp</span>
             </div>
-            <!-- Added Map Location directly to the grid to replace Instagram since it wasn't requested -->
-            <a href="https://www.google.com/maps?cid=12934671601976173403" class="action-btn click-sfx" target="_blank" style="grid-column: span 2;">
-                <i class="fa-solid fa-location-dot"></i><span>Navigate to Store</span>
+            <a href="https://www.instagram.com/khaleelquadry?utm_source=qr&stkn=aWQyMmc5dXBmeGxj" class="action-btn click-sfx" target="_blank">
+                <i class="fa-brands fa-instagram"></i><span>Instagram</span>
+            </a>
+            <a href="https://www.google.com/maps?cid=12934671601976173403" class="action-btn click-sfx" target="_blank">
+                <i class="fa-solid fa-location-dot"></i><span>Navigate</span>
             </a>
         </div>
 
@@ -308,7 +310,7 @@
             });
         });
 
-        // 4. MODAL ROUTING ENGINE (Khaleel Bhai & Yousuf Bhai)
+        // 4. MODAL ROUTING ENGINE
         const contacts = {
             khaleel: "9963852712",
             yousuf: "9963852711"
@@ -322,14 +324,14 @@
             if(type === 'call') {
                 modalTitle.innerHTML = '<i class="fa-solid fa-phone"></i> Call Store';
                 modalButtons.innerHTML = `
-                    <button onclick="window.location.href='tel:+91${contacts.khaleel}'" class="modal-btn click-sfx"><i class="fa-solid fa-phone-volume"></i> Khaleel Bhai</button>
                     <button onclick="window.location.href='tel:+91${contacts.yousuf}'" class="modal-btn click-sfx"><i class="fa-solid fa-phone-volume"></i> Yousuf Bhai</button>
+                    <button onclick="window.location.href='tel:+91${contacts.khaleel}'" class="modal-btn click-sfx"><i class="fa-solid fa-phone-volume"></i> Khaleel Bhai</button>
                 `;
             } else if (type === 'wa') {
                 modalTitle.innerHTML = '<i class="fa-brands fa-whatsapp"></i> WhatsApp Order';
                 modalButtons.innerHTML = `
-                    <button onclick="window.open('https://wa.me/91${contacts.khaleel}', '_blank')" class="modal-btn click-sfx"><i class="fa-brands fa-whatsapp"></i> Khaleel Bhai</button>
                     <button onclick="window.open('https://wa.me/91${contacts.yousuf}', '_blank')" class="modal-btn click-sfx"><i class="fa-brands fa-whatsapp"></i> Yousuf Bhai</button>
+                    <button onclick="window.open('https://wa.me/91${contacts.khaleel}', '_blank')" class="modal-btn click-sfx"><i class="fa-brands fa-whatsapp"></i> Khaleel Bhai</button>
                 `;
             }
             
